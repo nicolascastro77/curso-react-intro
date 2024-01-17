@@ -1,0 +1,15 @@
+.container-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--base-dark-2);
+}
+
+.container-title h1 {
+    color: var(--primary-color);
+    padding: 50px 25px;
+}
+
+.container-title span {
+    color: var(--tertiary-color);
+}

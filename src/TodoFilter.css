@@ -1,0 +1,29 @@
+
+.container-filter{
+    display: flex;/* Alinea los elementos internos en columna */
+    max-width: 1440px;
+    padding: 20px 10%;
+    justify-content: space-between;
+}
+
+
+input {
+    display: flex;
+    width: 85%;
+    padding: 16px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--base-dark-4);
+    background: var(--base-dark-3);
+    color: var(--base-light-3);
+}
+
+button {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--Gray-700, #0D0D0D);
+    background: var(--Gray-500, #262626);
+    color: #FFF;
+    cursor: pointer;
+}

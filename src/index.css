@@ -1,13 +1,71 @@
+:root {
+  --primary-color: #8284FA;
+  --secondary-color: #5E60CE;
+  --tertiary-color: #4EA8DE;
+  --accent-color: #1E6F9F;
+  --background-color: #262626 ;
+
+  --base-dark-1: #0D0D0D;
+  --base-dark-2: #1A1A1A;
+  --base-dark-3: #262626;
+  --base-dark-4: #333333;
+  
+  --base-light-1: #808080;
+  --base-light-2: #D9D9D9;
+  --base-light-3: #F2F2F2;
+
+  --error-color: #E25858;
+  --check-color: #58e26d;
+
+
+
+  --font-weight-light:: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 800;
+
+  --font-size-300: 1rem;
+  --font-size-400: 1.25rem;
+  --font-size-600: 1.5rem;
+  --font-size-800: 2rem;
+}
+
+body, h1, h2, p, /* Agrega otros elementos que desees resetear */
+ul, ol, li, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  margin: 0 auto;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--base-light-3);
+  font-family: 'Inter', BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  font-size: var(--font-size-800); /* Tamaño de fuente para h1 */
+  font-weight: var(--font-weight-bold); /* Peso de fuente para h1 */
+}
+
+h2 {
+  font-size: var(--font-size-600); /* Tamaño de fuente para h2 */
+  font-weight: var(--font-weight-medium); /* Peso de fuente para h2 */
+}
+
+p {
+  font-size: var(--font-size-400); /* Tamaño de fuente para h2 */
+  font-weight: var(--font-weight-regular); 
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+

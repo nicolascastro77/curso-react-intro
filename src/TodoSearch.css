@@ -1,0 +1,21 @@
+
+.container-search{
+    margin-top: 30px;
+    display: flex;/* Alinea los elementos internos en columna */
+    max-width: 1440px;
+    padding: 20px 10%;
+}
+
+
+.container-search input {
+    display: flex;
+    width: 100%;
+    padding: 16px;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--base-dark-4);
+    background: var(--base-dark-3);
+    color: var(--base-light-3);
+}
+

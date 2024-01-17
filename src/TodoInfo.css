@@ -1,0 +1,18 @@
+.container-info{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--base-dark-2);
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+.container-info-total h1 {
+    color: var(--primary-color);
+    padding: 50px 25px;
+}
+
+.container-info-completed h1 {
+    color: var(--primary-color);
+    padding: 50px 25px;
+}

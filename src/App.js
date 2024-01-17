@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
 import { TodoTitle } from "./TodoTitle";
+import { TodoInfo } from "./TodoInfo";
 import { TodoFilter } from "./TodoFilter";
 import { TodoList } from "./TodoList";
 import { TodoItem } from "./TodoItem";
-import { ButtonCreateTodo } from "./ButtonCreateTodo";
+import { TodoSearch } from "./TodoSearch";
 
 
 const defaultTodos = [
@@ -15,17 +16,25 @@ const defaultTodos = [
 ]
 
 function App() {
+  const [todos, setTodos] = React.useState(defaultTodos);
+  const completedTodos = todos.filter(todo => !!todo.completed).length;
+  const totalTodos = todos.length;
+  const [searchValue, setSearchValue] = React.useState('');
   return (
-    <React.Fragment>
-      <TodoTitle completed = {16} total = {20}/> 
+    <>
+      <TodoTitle/> 
       <TodoFilter/> 
+      <TodoInfo completed = {completedTodos} total = {totalTodos}/> 
+      <TodoSearch
+      searchValue= {searchValue}
+      setSearchValue= {setSearchValue}
+      /> 
       <TodoList> 
         {defaultTodos.map (todo => (
           <TodoItem key={todo.text} text={todo.text} completed={todo.completed} /> 
         ))}
       </TodoList> 
-      <ButtonCreateTodo/> 
-    </React.Fragment>
+    </>
   );
 }
 
