@@ -1,4 +1,4 @@
-import { ButtonCreateTodo } from "./ButtonCreateTodo";
+import { ButtonCreateTodo } from "../ButtonCreateTodo";
 import './TodoFilter.css';
 
 function TodoFilter() {
