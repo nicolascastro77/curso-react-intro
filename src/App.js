@@ -12,7 +12,6 @@ import { TodoAdd } from "./components/TodoAdd";
 import { Modal } from "./components/Modal";
 import { useLocalStorage } from "./hooks/useLocalStorage";
 
-
 // const defaultTodos = [
 //   { text: 'Cortar cebolla', completed: true },
 //   { text: 'Cortar PAN', completed: false },

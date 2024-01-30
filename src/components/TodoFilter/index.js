@@ -28,7 +28,7 @@ function TodoFilter({
     <form onSubmit={onSubmit}>
       <label>Esribe tu nuevo TODO</label>
       <textarea
-        placeholder="Cortar cebolla para el almuerzo"
+        placeholder="Tarea por realizar"
         value={newTodoValue}
         onChange={onChange}
         required
