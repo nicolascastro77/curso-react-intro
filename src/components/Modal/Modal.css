@@ -2,8 +2,9 @@
 
 .modal-container {
     display: flex;
-    background: rgba(0, 0, 0, 0.5);
-    position: fixed;
+    background: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    z-index: 5;
     top: 0;
     left: 0;
     width: 100%;
@@ -13,12 +14,15 @@
 }
 
 .modal-content {
-    background: var(--accent-color);
+    background: var(--base-dark-2);
     padding: 20px;
     border-radius: 5px;
     width: 800px;
-    height: 800px;
     text-align: center;
+}
+
+.modal-content .container-filter {
+    margin-top: 100px;
 }
 
 .open-modal-btn {

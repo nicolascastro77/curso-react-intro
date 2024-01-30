@@ -13,3 +13,8 @@
 .container-title span {
     color: var(--tertiary-color);
 }
+
+.container-title img {
+    height: 40px;
+    width: 40px;
+}

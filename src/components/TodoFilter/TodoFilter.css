@@ -1,29 +1,66 @@
-
-.container-filter{
-    display: flex;/* Alinea los elementos internos en columna */
-    max-width: 1440px;
-    padding: 20px 10%;
-    justify-content: space-between;
-}
-
-
-input {
+form {
+    width: 90%;
+    padding: 33px 40px;
     display: flex;
-    width: 85%;
-    padding: 16px;
+    justify-content: center;
     align-items: center;
-    gap: 8px;
-    border-radius: 8px;
-    border: 1px solid var(--base-dark-4);
-    background: var(--base-dark-3);
-    color: var(--base-light-3);
-}
-
-button {
-    padding: 16px;
-    border-radius: 8px;
-    border: 1px solid var(--Gray-700, #0D0D0D);
-    background: var(--Gray-500, #262626);
-    color: #FFF;
+    flex-direction: column;
+  }
+  
+  label {
+    font-family: 'Inter';
+    font-size: var(--font-size-800); /* Tamaño de fuente para h1 */
+    font-weight: var(--font-weight-medium); /* Peso de fuente para h1 */
+    text-align: center;
+    color:  var(--base-light-3);
+    margin-bottom: 26px;
+  }
+  
+  textarea {
+    background-color: var(--base-light-3);
+    border: 2px solid #202329;
+    border-radius: 2px;
+    box-shadow: 0px 5px 50px rgba(32, 35, 41, 0.25);
+    color: #1E1E1F;
+    text-align: center;
+    padding: 12px;
+    height: 96px;
+    width: calc(100% - 25px);
+  }
+  
+  textarea::placeholder {
+    color: var(--base-light-1);
+    font-weight: 400;
+  }
+  
+  textarea:focus {
+    outline-color: #1b6479;
+  }
+  
+  .TodoForm-buttonContainer {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .TodoForm-button {
     cursor: pointer;
-}
+    display: inline-block;
+    font-size: 20px;
+    color:  var(--base-light-3);
+    font-weight: 400;
+    width: 120px;
+    height: 48px;
+    border-radius: 2px;
+    border: none;
+  }
+  
+  .TodoForm-button--add {
+    background: var(--primary-color);
+  }
+  
+  .TodoForm-button--cancel {
+    background: transparent;
+  }

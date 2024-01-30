@@ -1,0 +1,22 @@
+
+.empty{
+    margin: 50px;
+}
+
+.empty-title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.empty-title h2 {
+    font-size: var(--font-size-600);
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+}
+
+.empty-title h2 span {
+    color: var(--tertiary-color);
+}
+
+

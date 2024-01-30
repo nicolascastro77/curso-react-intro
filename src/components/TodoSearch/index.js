@@ -10,7 +10,7 @@ function TodoSearch({
     return (
       <div className="container-search">
        <input type="text" 
-              placeholder="C cebolla"
+              placeholder="Filtrar TODOS"
               value={searchValue}
               onChange={(event)=> {
                 setSearchValue(event.target.value);

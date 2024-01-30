@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import { TodoTitle } from "./components/TodoTitle";
 import { TodoInfo } from "./components/TodoInfo";
-import { TodoFilter } from "./components/TodoFilter";
 import { TodoList } from "./components/TodoList";
 import { TodoItem } from "./components/TodoItem";
 import { TodoSearch } from "./components/TodoSearch";
@@ -31,21 +30,17 @@ function App() {
   } = useLocalStorage('TODOS_V1', []);
 
 
-
   const completedTodos = todos.filter(todo => !!todo.completed).length;
   const totalTodos = todos.length;
   const [searchValue, setSearchValue] = React.useState('');
 
-  const [openModal, setOpenModal] = React.useState(true);
+  const [openModal, setOpenModal] = React.useState(false);
 
   const searchedTodos = todos.filter(todo => { 
     const todoText = todo.text.toLowerCase()
     const TodoSearchText = searchValue.toLowerCase();
     return todoText.includes(TodoSearchText);
   }  );
-
-
-
 
 
   const completeTodo = (text) => {
@@ -62,6 +57,15 @@ function App() {
     saveTodos(newTodos)
   }
 
+  const addTodo = (text) => {
+    const newTodos = [...todos];
+    newTodos.push({
+      text,
+      completed: false
+    });
+    saveTodos(newTodos)
+  }
+
   return (
     <>
       <TodoTitle/> 
@@ -69,12 +73,12 @@ function App() {
       openModal = {openModal}
       setOpenModal = {setOpenModal}
       /> 
-      <TodoFilter/> 
+
       <TodoInfo completed = {completedTodos} total = {totalTodos} loading = {loading}/> 
-      <TodoSearch
+      {( !loading && searchedTodos.length > 0) && <TodoSearch
       searchValue= {searchValue}
       setSearchValue= {setSearchValue}
-      /> 
+      />} 
       <TodoList> 
         {loading && <TodosLoading />}
         {loading && <TodosLoading />}
@@ -86,7 +90,8 @@ function App() {
                     text={todo.text} 
                     completed={todo.completed}
                     onComplete = {() => completeTodo(todo.text)}
-                    onDelete = {() => deleteTodo(todo.text)} /> 
+                    onDelete = {() => deleteTodo(todo.text)}
+                    /> 
         ))}
       </TodoList> 
 
@@ -94,7 +99,9 @@ function App() {
       {openModal && 
         <Modal
         openModal = {openModal}
-        setOpenModal = {setOpenModal}>
+        setOpenModal = {setOpenModal}
+        addTodo = {addTodo}
+        >
         </Modal>  
       }
     </>

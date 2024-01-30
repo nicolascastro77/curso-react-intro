@@ -1,6 +1,8 @@
 .add-button{
-    justify-content: center;
-    max-width: none;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  max-width: none;
 }
 
 .CartBtn {

@@ -40,8 +40,7 @@
     }
   }
   
-  
   .congratulations-message {
     animation:  fade-in 1s ease-in-out, bounce-in 1s ease-in-out; /* Aplica la animación de entrada con duración de 1 segundo y función de temporización ease-in-out, y la animación de salida con duración de 1 segundo después de 5 segundos */
-    color: var(--primary-color); /* Cambia el color del texto a un verde más vibrante */
+    color: var(--check-color); /* Cambia el color del texto a un verde más vibrante */
   }

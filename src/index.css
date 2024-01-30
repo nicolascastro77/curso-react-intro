@@ -18,7 +18,6 @@
   --check-color: #58e26d;
 
 
-
   --font-weight-light:: 300;
   --font-weight-regular: 400;
   --font-weight-medium: 600;
@@ -47,6 +46,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+textarea{
+  font-family: 'Inter';
+  font-size: var(--font-size-600); /* Tamaño de fuente para h1 */
+  font-weight: var(--font-weight-regular); /* Peso de fuente para h1 */
 }
 
 h1 {
