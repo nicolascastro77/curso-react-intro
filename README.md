@@ -10,9 +10,12 @@ Welcome to the React TODO MACHINE project! 🚀 This task management app was cra
 ## Sneak Peek
 
 Dive into the visual awesomeness with these screenshots:
-
-![Screenshot 1](path/to/image1.png)
-![Screenshot 2](path/to/image2.png)
+<div align="center">
+  <img src="public/resource/img1.png" alt="Screenshot 1" width="400" />
+  <img src="public/resource/img2.png" alt="Screenshot 1" width="400" />
+  <img src="public/resource/img3.png" alt="Screenshot 1" width="400" />
+  <img src="public/resource/img4.png" alt="Screenshot 1" width="400" />
+</div>
 
 ## Features Galore
 
