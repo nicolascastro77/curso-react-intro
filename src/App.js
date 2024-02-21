@@ -11,6 +11,8 @@ import { TodosLoading } from "./components/TodosLoading";
 import { TodoAdd } from "./components/TodoAdd";
 import { Modal } from "./components/Modal";
 import { useLocalStorage } from "./hooks/useLocalStorage";
+import { EmptySearchTodos } from './components/EmptySearchTodos';
+
 
 // const defaultTodos = [
 //   { text: 'Cortar cebolla', completed: true },
@@ -18,7 +20,6 @@ import { useLocalStorage } from "./hooks/useLocalStorage";
 //   { text: 'TOMAR CURSO', completed: true },
 //   { text: 'SEA LO QUE ', completed: false }
 // ]
-
 function App() {
 
   const {
@@ -74,7 +75,7 @@ function App() {
       /> 
 
       <TodoInfo completed = {completedTodos} total = {totalTodos} loading = {loading}/> 
-      {( !loading && searchedTodos.length > 0) && <TodoSearch
+      {( !loading ) && <TodoSearch
       searchValue= {searchValue}
       setSearchValue= {setSearchValue}
       />} 
@@ -83,7 +84,9 @@ function App() {
         {loading && <TodosLoading />}
         {loading && <TodosLoading />}
         {error && <TodosError />}
-        { ( !loading && searchedTodos.length == 0) && <EmptysTodos />}
+        { ( !!totalTodos && !totalTodos) && <EmptysTodos />}
+        { ( !loading && !searchedTodos.length) && <EmptySearchTodos searchValue= {searchValue} />}
+        
         {searchedTodos.map (todo => (
           <TodoItem key={todo.text} 
                     text={todo.text} 
